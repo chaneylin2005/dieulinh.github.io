@@ -1,0 +1,150 @@
+/* Thiết lập nền trang chủ */
+.home {
+    background-image: url('background.jpg'); /* Ảnh nền */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+/* 🔹 Thiết lập nền cho các trang con với lớp phủ */
+.page-background {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* 🔹 Lớp phủ mờ giúp chữ rõ hơn */
+.page-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Độ mờ 50% */
+    z-index: 1;
+}
+
+/* 🔹 Nội dung hiển thị trên lớp phủ */
+.page-content {
+    position: relative;
+    z-index: 5;
+    padding: 100px;
+    background: rgba(255, 255, 255, 0.5); /* Nền trắng mờ */
+    border-radius: 0px;
+    font-size: 20px;
+    width: 100%;
+}
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    font-size: 25px;
+    font-family: arial;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Hiển thị menu theo hàng ngang */
+    justify-content: center; /* Căn giữa menu */
+    gap: 200px; /* Tăng khoảng cách giữa các mục */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Nội dung chính */
+main {
+    padding: 30px;
+    width: 100%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    font-size: 20px;
+    text-align: left;
+}
+
+/* Slider ảnh */
+.slider {
+    width: 92%; /* Tăng chiều rộng slider */
+    height: 350px; /* Chiều cao lớn hơn */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slideAnimation 120s infinite linear;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%; /* Đảm bảo hình ảnh phủ hết slider */
+    object-fit: cover; /* Cắt ảnh để vừa với slider */
+    border-radius: 10px;
+}
+
+/* Hiệu ứng chuyển động */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+form {
+    margin: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px; /* Giãn cách giữa các trường */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
