@@ -3,10 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Giới thiệu và Ảnh Chồng Lên Nhau So Le</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, dodgerblue, lightblue);
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+            padding: 30px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Header và Menu */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 3.5rem; /* Giữ kích thước tiêu đề lớn như bản gốc */
+            margin-bottom: 20px;
+            margin-top:10;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+            gap: 150px; /* Tăng khoảng cách giữa các mục */
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            display: inline;
+            font-size: 35px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 25px; /* Giữ kích thước font chữ menu như bản gốc */
+            font-family: Arial;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        /* Nội dung chính */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 30px;
+        }
+
+        .text-content {
+            flex: 1;
+            padding-right: 10px;
+        }
+
+        .text-content h1 {
+            margin-bottom: 10px;
+            margin-left: 50px;
+        }
+
+        .text-content p {
+            line-height: 1.6;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        /* Phần ảnh chồng lên nhau */
+        .image-container {
+            position: relative;
+            width: 700px; /* Chiều rộng của vùng chứa ảnh */
+            height: 500px; /* Chiều cao của vùng chứa ảnh */
+            margin-left: 20px; /* Khoảng cách giữa ảnh và phần giới thiệu */
+        }
+
+        .image-container img {
+            position: absolute;
+            width: 60%; /* Giảm kích thước ảnh một chút */
+            height: auto;
+            object-fit: cover;
+            transition: all 0.5s ease; /* Hiệu ứng mượt mà khi di chuyển */
+        }
+
+        .image-container img:nth-child(1) {
+            top: 0px;
+            left: 65 px;
+            z-index: 1;
+        }
+
+        .image-container img:nth-child(2) {
+            top: 200px;
+            right: 70px;
+            z-index: 2;
+        }
+
+        .image-container img:nth-child(3) {
+            top: 0px;
+            left: 500px;
+            z-index: 3;
+        }
+
+        .image-container img:nth-child(4) {
+            top: 80px;
+            left: 150px;
+            z-index: 4;
+        }
+
+        .image-container img:nth-child(5) {
+            top: 100px;
+            left: 200px;
+            z-index: 5;
+        }
+    </style>
 </head>
-<body style="background-image: url('6.jpg'); background-size: cover; background-position: center; min-height: 100vh;">
+<body>
+    <!-- Phần Header và Menu -->
     <header>
         <h1>Giới thiệu</h1>
         <nav>
@@ -18,15 +145,35 @@
             </ul>
         </nav>
     </header>
-    <main class="page-content">
-        <p>Họ và tên: Nguyễn Đình Diệu Linh<br>
-           Lớp: 12A1.2<br>
-           Trường: THPT Liên Hà<br>
-           Nơi ở: Đông Anh, Hà Nội<br>
-           Sở thích: nghe nhạc, chơi một vài môn thể thao
-       </p>
-    </main>
+
+    <!-- Nội dung chính -->
+    <div class="content">
+        <!-- Phần giới thiệu -->
+        <div class="text-content">
+            <h1>Giới thiệu</h1>
+            <p>
+                Họ và tên: Nguyễn Đình Diệu Linh<br>
+                Lớp: 12A1.2<br>
+                Trường: THPT Liên Hà<br>
+                Nơi ở: Đông Anh, Hà Nội<br>
+                Sở thích: nghe nhạc, chơi thể thao<br>
+
+            </p>
+        </div>
+
+        <!-- Phần ảnh chồng lên nhau so le -->
+        <div class="image-container">
+            <img src="5.jpg" alt="Image 1">
+            <img src="8.jpg" alt="Image 4">
+            <img src="9.jpg" alt="Image 5">
+        </div>
+    </div>
 </body>
 </html>
 
+
+
+    </main>
+</body>
+</html>
 
