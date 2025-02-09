@@ -7,6 +7,7 @@
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, dodgerblue, lightblue);
 }
 /* 🔹 Thiết lập nền cho các trang con với lớp phủ */
 .page-background {
@@ -48,7 +49,7 @@
 }
 /* Header */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 1);
     padding: 5px;
     font-size: 25px;
     font-family: arial;
@@ -61,7 +62,8 @@ nav ul {
     padding: 0;
     display: flex; /* Hiển thị menu theo hàng ngang */
     justify-content: center; /* Căn giữa menu */
-    gap: 200px; /* Tăng khoảng cách giữa các mục */
+    gap: 150px; /* Tăng khoảng cách giữa các mục */
+    font-size: 30px;
 }
 
 nav ul li {
@@ -78,12 +80,13 @@ nav ul li a {
 /* Nội dung chính */
 main {
     padding: 30px;
-    width: 100%;
+    width: 96%;
     margin: auto;
-    background: rgba(0, 0, 0, 0);
+    background: linear-gradient(to bottom, dodgerblue, lightblue);
     color: black;
     font-size: 20px;
     text-align: left;
+    background-size: cover;
 }
 
 /* Slider ảnh */
@@ -100,7 +103,7 @@ main {
     display: flex;
     width: 100%;
     height: 100%;
-    animation: slideAnimation 120s infinite linear;
+    animation: slideAnimation 90s infinite linear;
 }
 
 .slides img {
@@ -147,4 +150,88 @@ form button {
 form button:hover {
     background-color: #45a049;
 }
+/* Chỉ áp dụng cho trang Liên hệ */
+.contact-page {
+    /* Phần chung cho toàn bộ trang Liên hệ */
+    background-image: url('background-contact.jpg'); /* Ảnh nền cho trang liên hệ */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
+/* Đặt nền cho trang liên hệ */
+.contact-page header {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contact-page nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 0;
+}
+
+.contact-page nav ul li {
+    display: inline;
+}
+
+.contact-page nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* Nội dung chính của trang Liên hệ */
+.contact-page main {
+    background-color: rgba(255, 255, 255, 0.8); /* Lớp phủ nền trắng mờ */
+    padding: 10px;
+    width: 60%;
+    margin: 30px auto;
+    border-radius: 10px;
+    color: black;
+}
+
+/* Đặt tiêu đề */
+.contact-page main h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Các trường trong form */
+.contact-page form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-page form input, .contact-page form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-page form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hiệu ứng hover cho nút */
+.contact-page form button:hover {
+    background-color: #45a049;
+}
